@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-area {
+            background: #F3EAD8;
+        }
+
+        .testimonial-area .testimonial-caption {
+            /* padding: ; */
+        }
+
+        .testimonial-caption h2 {
+            font-size: 34px;
+            font-weight: 500;
+            color: #292621;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-caption p {
+            line-height: 1.5;
+            padding: 0 200px;
+            margin-bottom: 32px;
+            font-size: 22px;
+            color: #292621;
+            font-weight: 400;
+        }
+
+        .testimonial-caption .founder-text {
+            margin-left: 20px;
+            /* text-align: ; */
+        }
+
+        .testimonial-caption .founder-text span {
+            font-family: "Jost", sans-serif;
+            color: #292621;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .testimonial-caption .founder-text p {
+            color: #74706B;
+            font-weight: 500;
+            line-height: 1.5;
+
+        }
+
+        .testimonial-founder {
+            display: flex;
+        }
+
+        .swiper-button-next:after {
+            color: #74706B;
+            font-size: 25px;
+        }
+
+        .swiper-button-prev:after {
+            color: #74706B;
+            font-size: 25px;
+        }
+
+        .swiper-button-prev.swiper-button-disabled {
+            opacity: 1;
+            cursor: pointer;
+            pointer-events: all;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <section class="testimonial-area">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-xl-10 col-lg-10 col-md-11">
+
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-caption ">
+                                    <div class="testimonial-top-cap">
+                                        <h2>Customer Testimonial</h2>
+                                        <p>Everybody is different, which is why we offer styles for every body. Laborum
+                                            fuga incidunt laboriosam voluptas iure, delectus dignissimos facilis neque
+                                            nulla earum.</p>
+                                    </div>
+
+                                    <div class="testimonial-founder d-flex  align-items-center justify-content-center">
+                                        <div class="founder-img">
+                                            <img src="../img/founder-img.png.webp" alt="">
+                                        </div>
+                                        <div class="founder-text">
+                                            <span>Petey Cruiser</span>
+                                            <p>Designer at Colorlib</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-caption ">
+                                    <div class="testimonial-top-cap">
+                                        <h2>Customer Testimonial</h2>
+                                        <p>Everybody is different, which is why we offer styles for every body. Laborum
+                                            fuga incidunt laboriosam voluptas iure, delectus dignissimos facilis neque
+                                            nulla earum.</p>
+                                    </div>
+
+                                    <div class="testimonial-founder d-flex  align-items-center justify-content-center">
+                                        <div class="founder-img">
+                                            <img src="../img/founder-img.png.webp" alt="">
+                                        </div>
+                                        <div class="founder-text">
+                                            <span>Petey Cruiser</span>
+                                            <p>Designer at Colorlib</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-caption ">
+                                    <div class="testimonial-top-cap">
+                                        <h2>Customer Testimonial</h2>
+                                        <p>Everybody is different, which is why we offer styles for every body. Laborum
+                                            fuga incidunt laboriosam voluptas iure, delectus dignissimos facilis neque
+                                            nulla earum.</p>
+                                    </div>
+
+                                    <div class="testimonial-founder d-flex  align-items-center justify-content-center">
+                                        <div class="founder-img">
+                                            <img src="../img/founder-img.png.webp" alt="">
+                                        </div>
+                                        <div class="founder-text">
+                                            <span>Petey Cruiser</span>
+                                            <p>Designer at Colorlib</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
+</body>
+
+</html>

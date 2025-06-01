@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         body {
+            background-color: black;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .box img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: transform 1s;
+        }
+
+        .box:hover  img:hover {
+            transform: scale(1.1);
+
+
+        }
+        .social-icon{
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            text-align: center;
+           opacity: 0;
+            
+        }
+        .box:hover .social-icon
+        {
+            opacity: 1;
+        }
+        .social-icon a{
+            background-color: white;
+            margin: -2px;
+            display: inline-block;
+        
+        }
+        .social-icon a i{
+            color: rgb(209, 25, 25);
+            padding: 20px;
+            transition: 1s;
+            font-size: 20px;
+
+            background-color: white;
+        }
+        .social-icon a i:hover{
+            background-color: red;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="image">
+            <img src="../img/items2.jpg.webp" alt="">
+        </div>
+        <div class="social-icon">
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+
+            
+        </div>
+    </div>
+</body>
+</html>

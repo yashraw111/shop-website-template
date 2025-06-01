@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .head-part nav {
+            /* padding: 20px; */
+            padding: 0;
+            border-bottom: 1px solid red;
+            margin-bottom: 20px;
+        }
+
+        .latest-item .head-part a {
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px;
+            padding-bottom: 20px;
+            color: #292621;
+            font-weight: 500;
+
+        }
+
+        .latest-item .head-part a:hover {
+            border-bottom: 4px solid red;
+        }
+
+        .head-part .active {
+            border-bottom: 4px solid red;
+
+        }
+
+        .latest-item .head-part {
+            align-items: center;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .myswiper {
+            /* padding: 0px; */
+            margin-top: 200px;
+        }
+
+        .swiper-wrapper {
+            padding-top: 20px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-slide .card {
+            border: none;
+        }
+
+        .latest-item .swiper-wrapper .swiper-slide .properties-caption {
+            padding: 14px 20px 2px 0px;
+        }
+
+        .properties-caption a {
+            text-decoration: none;
+            font-size: 16px;
+
+            color: #292621;
+        }
+
+        .properties-caption a:hover {
+            color: red;
+        }
+
+        .properties-caption h3 {
+            font-family: "Jost", sans-serif;
+            color: #292621;
+            margin-top: 0px;
+            font-style: normal;
+            font-weight: 500;
+            text-transform: normal;
+        }
+
+        /* 
+        .latest-items .properties .properties-card .properties-caption .properties-footer .price span {
+            color: #74706B;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .properties-footer .price:nth-child(2) {
+            display: inline-block;
+            color: #CEBD9C;
+            text-decoration: line-through;
+            margin: 0;
+            margin-left: 12px;
+        } */
+
+        .card {
+            overflow: hidden;
+        }
+
+        .card img {
+            transition: transform 1s;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card .image {
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .card .social_icon {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            opacity: 0;
+            right: 0;
+            transition: transform 1s;
+            margin: 0 auto;
+        }
+
+        .card:hover .social_icon {
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+
+        .card .social_icon i {
+            padding: 14px;
+            font-size: 25px;
+            color: black;
+            background-color: whitesmoke;
+            transition: 1s all;
+        }
+
+        .card .social_icon i:hover {
+            background-color: #FF2020;
+            color: white;
+        }
+
+        .card .social_icon a {
+            margin: -3px;
+
+        }
+
+        .properties-footer .span2 {
+            color: #CEBD9C;
+        }
+
+        .properties-footer .price {
+            font-weight: 700;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="latest-item">
+        <div class="container">
+            <div class="head-part  ">
+                <nav class="d-flex justify-content-between  border-1 border-bottom">
+                    <div class="nav-title">
+                        <h2>Trending This Week</h2>
+                    </div>
+                    <div class="details">
+                        <a href="" class="active">Men</a>
+                        <a href="">Women</a>
+                        <a href="">Baby</a>
+                        <a href="">Fashion</a>
+
+                    </div>
+                </nav>
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <div class="image">
+                                <img src="../img/latest1.jpg" class="card-img-top" alt="...">
+
+                                <div class="social_icon">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                </div>
+
+
+                            </div>
+                            <div class="card-body">
+                                <div class="properties-caption properties-caption2">
+                                    <h3><a href="pro-details.html" tabindex="-1">Cashmere Tank + Bag</a></h3>
+                                    <div class="properties-footer">
+                                        <div class="price">
+                                            <span>$98.00</span> <span class="span2">$120.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <div class="image">
+                                <img src="../img/latest4.jpg" class="card-img-top" alt="...">
+
+                                <div class="social_icon">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                </div>
+
+
+                            </div>
+                            <div class="card-body">
+                                <div class="properties-caption properties-caption2">
+                                    <h3><a href="pro-details.html" tabindex="-1">Cashmere Tank + Bag</a></h3>
+                                    <div class="properties-footer">
+                                        <div class="price">
+                                            <span>$98.00</span> <span class="span2">$120.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <div class="image">
+                                <img src="../img/latest2.jpg" class="card-img-top" alt="...">
+
+                                <div class="social_icon">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                </div>
+
+
+                            </div>
+                            <div class="card-body">
+                                <div class="properties-caption properties-caption2">
+                                    <h3><a href="pro-details.html" tabindex="-1">Cashmere Tank + Bag</a></h3>
+                                    <div class="properties-footer">
+                                        <div class="price">
+                                            <span>$98.00</span> <span class="span2">$120.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <div class="image">
+                                <img src="../img/latest3.jpg" class="card-img-top" alt="...">
+
+                                <div class="social_icon">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                </div>
+
+
+                            </div>
+                            <div class="card-body">
+                                <div class="properties-caption properties-caption2">
+                                    <h3><a href="pro-details.html" tabindex="-1">Cashmere Tank + Bag</a></h3>
+                                    <div class="properties-footer">
+                                        <div class="price">
+                                            <span>$98.00</span> <span class="span2">$120.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <div class="image">
+                                <img src="../img/latest4.jpg" class="card-img-top" alt="...">
+
+                                <div class="social_icon">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                </div>
+
+
+                            </div>
+                            <div class="card-body">
+                                <div class="properties-caption properties-caption2">
+                                    <h3><a href="pro-details.html" tabindex="-1">Cashmere Tank + Bag</a></h3>
+                                    <div class="properties-footer">
+                                        <div class="price">
+                                            <span>$98.00</span> <span class="span2">$120.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card" style="width: 18rem;">
+                            <div class="image">
+                                <img src="../img/latest5.jpg" class="card-img-top" alt="...">
+
+                                <div class="social_icon">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                </div>
+
+
+                            </div>
+                            <div class="card-body">
+                                <div class="properties-caption properties-caption2">
+                                    <h3><a href="pro-details.html" tabindex="-1">Cashmere Tank + Bag</a></h3>
+                                    <div class="properties-footer">
+                                        <div class="price">
+                                            <span>$98.00</span> <span class="span2">$120.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="swiper-pagination"></div> -->
+
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+</html>
